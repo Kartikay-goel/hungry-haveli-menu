@@ -11,12 +11,34 @@
 
 }
 
-body {
-    /* overflow-x: hidden; */
+
+header{
+    /* display: none; */
+     
+    position: sticky;
+    width: 100%;
+    top:0;
+    left:0;
+    z-index: 1000;
+    
 }
 
 nav {
+    
     background-color: rgba(180, 128, 15, 0.377);
+    border-bottom:2px solid brown;
+
+}
+
+header::before{
+    background-color: white; 
+    z-index: -1;
+    content: "";
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 100%;
 
 }
 
@@ -584,6 +606,9 @@ h2 {
 
 
 @media(max-width:400px) {
+    header{
+        position:relative;
+    }
 
     nav ul li {
         background-color: unset;
@@ -600,7 +625,7 @@ h2 {
 
     #top_menu_heading2 {
         font-size: 4rem;
-        font-weight: 400;
+        font-weight: 500;
         margin-bottom: -30px;
         margin-top: 8px;
 
@@ -677,6 +702,7 @@ h2 {
 @media(max-width: 260px) {
     #top_menu_heading2 {
         font-size: 3rem;
+        font-weight: 400;
 
 
     }
