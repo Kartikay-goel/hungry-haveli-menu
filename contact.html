@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="contact_us.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <a href="index.html">Menu</a>
+                <a href="online_table.html">Table Booking</a>
+                <a href="#">About</a>
+                <a href="#">Photos</a>
+                <a href="#">Contact Us</a>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="contactus_container">
+        <div class="contactus_content">
+
+            <h1 id="contact_heading" class="custom_underline">Contact Us</h1>
+            <div class="contactus_header">
+                <p>Your experience matters to us! Whether you have a suggestion for improvement, a compliment, or a
+                    thought to share, please take a moment to fill out the form below. Your feedback goes directly to
+                    our inbox and helps us serve you better.</p>
+            </div>
+    
+            <div class="form_container">
+                <form  id="contact-form">
+                    <div class="form_item">
+                        <label for="form_name_text">Your Name</label>
+                       
+                        <input type="text" id="form_name_text" placeholder="Enter your name">
+                    </div>
+                    <p id="name_error"></p>
+                    
+                    <div class="form_item">
+                        <label for="form_message_text">Your Message</label>
+                        <textarea name="" rows="6" id="form_message_text" placeholder="Enter your message"></textarea>
+                    </div>
+                    <p id="message_error"></p>
+                    <button type="submit" id="form_submit_button">Send Message</button>
+                </form>
+                <p id="thank_you"></p>
+            </div>
+            
+        </div>
+        
+    </div>
+    <script src="contact.js"></script>
+
+</body>
+
+</html>
