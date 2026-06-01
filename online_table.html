@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Table Booking</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="online_table.css">
 </head>
+
 <body>
-        <header>
+    <header>
         <nav>
             <ul>
                 <a href="index.html">Menu</a>
@@ -18,11 +21,78 @@
             </ul>
         </nav>
     </header>
-
-    <div class="table_booking_container">
-        Coming Soon...
+    <div class="main-page-heading">
+        <h1 class="heading">The Hungry Haveli</h1>
+        <p class="sub_heading">A Place for every Taste</p>
     </div>
 
+    <div class="table_booking_container">
+        <div class="booking_image">
+            <img src="https://t3.ftcdn.net/jpg/19/73/82/54/240_F_1973825493_OJylk04gOOWRi4oeXs9JEnNEoP9kjbfa.jpg" alt=""
+                srcset="">
+        </div>
+        <div class="booking_container">
+            <div class="booking_header">
+                <h1>Reserve A Table</h1>
+            </div>
+            <div class="booking_info">
+
+
+                <div class="input_item">
+
+
+                    <input type="text" id="booking_name" placeholder="Name">
+                    <span class="error_message" id="name_error"></span>
+                </div>
+
+                <div class="input_item">
+
+
+                    <input type="tel" id="phone_number" minlength="10" maxlength="10" placeholder="Enter your phone number">
+                    <span class="error_message" id="phone_error"></span>
+                </div>
+
+
+                <div class="input_item">
+
+
+                    <input type="number" id="adult" min="1" placeholder="Adults">
+                    <span class="error_message" id="adult_error"></span>
+                </div>
+
+
+                <div class="input_item">
+
+                    <input type="number" min="0" id="children" placeholder="Children">
+                    <span class="error_message" id="children_error"></span>
+
+                </div>
+
+                <div class="input_item">
+
+                    <input type="date" name="" id="date" placeholder="Booking Date">
+                    <span class="error_message" id="date_error"></span>
+                </div>
+
+                <div class="input_item">
+
+
+                    <input type="time" name="" id="time" placeholder="Time">
+                    <span class="error_message" id="time_error"></span>
+                </div>
+
+                <div class="input_item">
+
+                    <textarea rows="6" name="" id="comment" placeholder="Leave a comment or special request"></textarea>
+                      <span id="success_booking"></span>
+                </div>
+            </div>
+            <button type="button" id="reserve_table">Reserve Table</button>
+
+        </div>
+    </div>
+    <script src="online_table.js"></script>
 
 </body>
+
 </html>
