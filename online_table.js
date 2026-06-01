@@ -6,7 +6,6 @@ const time_e = document.getElementById("time_error");
 const name_e = document.getElementById("name_error");
 const phone_e = document.getElementById("phone_error");
 const success= document.getElementById("success_booking");
-let isvalid = true;
 
 const today= new Date();
 const year= today.getFullYear();
@@ -21,7 +20,8 @@ const minMinutes=String(minAllowTime.getMinutes()).padStart(2,'0');
 const allowTime=`${minHour}:${minMinutes}`;
 
 btn.addEventListener("click", function () {
-
+    
+    let isvalid = true;
     adult_e.textContent = "";
     child_e.textContent = "";
     date_e.textContent = "";
