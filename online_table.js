@@ -101,6 +101,9 @@ btn.addEventListener("click", function () {
         booking_name_tag.value="";
         phone_tag.value="";
         success.textContent = "Your booking is received";
+        setTimeout(()=>{
+            success.textContent="";
+        },3000)
     }
 
 
