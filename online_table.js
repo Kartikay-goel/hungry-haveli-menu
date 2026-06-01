@@ -8,6 +8,17 @@ const phone_e = document.getElementById("phone_error");
 const success= document.getElementById("success_booking");
 let isvalid = true;
 
+const today= new Date();
+const year= today.getFullYear();
+const month=String(today.getMonth()+1).padStart(2,'0');
+const day=String(today.getDate()).padStart(2,'0');
+const format_date=`${year}-${month}-${day}`;
+document.getElementById("date").setAttribute("min",format_date);
+
+const minAllowTime=new Date(today.getTime() + 2*60*60*1000);
+const minHour=String(minAllowTime.getHours()).padStart(2,'0');
+const minMinutes=String(minAllowTime.getMinutes()).padStart(2,'0');
+const allowTime=`${minHour}:${minMinutes}`;
 
 btn.addEventListener("click", function () {
 
@@ -52,7 +63,21 @@ btn.addEventListener("click", function () {
     if (time_input === "") {
         time_e.textContent = "Enter the time.";
         isvalid = false;
+    }else if( time_input>"22:00" ){
+        time_e.textContent = "Last reservation is at 10:00 PM";
+        isvalid=false;
+    }else if( date_input>format_date && time_input<"11:00"){
+        time_e.textContent = "Reservation starts at 11:00 AM";
+        isvalid=false;
+
     }
+    else if(time_input<allowTime && date_input=== format_date){
+        time_e.textContent = "Please make reservation at least 2 hours in advance";
+        isvalid=false;
+        
+    }
+        
+    
     if (booking_name_input === "") {
         name_e.textContent = "Enter your name.";
         isvalid = false;
